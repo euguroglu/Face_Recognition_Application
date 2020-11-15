@@ -1,12 +1,25 @@
 from flask import Flask, render_template,Response
 from camera import VideoCamera
 
+
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+
+@app.route('/about')
+def about():
+    return render_template("about.html")
+
+@app.route('/projects')
+def projects():
+    return render_template("projects.html")
 
 def gen(camera):
     while True:
@@ -20,5 +33,5 @@ def video_feed():
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    # defining server ip address and port
+
     app.run(debug=True)
