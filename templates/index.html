@@ -63,14 +63,14 @@
           </li>
         </ul>
         <!-- social icons -->
-        <ul class="social-icons">
+        <ul class="social-icons hero-icons">
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-facebook"></i>
+            <a href="https://www.instagram.com/enesuguroglu/" class="social-icon">
+              <i class="fab fa-instagram"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
+            <a href="https://www.linkedin.com/in/enes-u%C4%9Furo%C4%9Flu-79827215a/" class="social-icon">
               <i class="fab fa-linkedin"></i>
             </a>
           </li>
@@ -80,13 +80,14 @@
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-behance"></i>
+            <a href="https://www.kaggle.com/enesugurolu" class="social-icon">
+              <i class="fab fa-kaggle"></i>
             </a>
           </li>
           <li>
-            <a href="https://www.twitter.com" class="social-icon">
-              <i class="fab fa-instagram"></i>
+
+            <a href="https://www.facebook.com/enes.uguroglu" class="social-icon">
+              <i class="fab fa-facebook"></i>
             </a>
           </li>
         </ul>
@@ -99,7 +100,7 @@
         <article class="hero-info">
           <div class="underline"></div>
           <h1>i'm Enes</h1>
-          <h4>Mechatronic PhD Cdt. & Data Scientist</h4>
+          <h4>Mechatronics PhD Cdt. & Data Scientist</h4>
           <a href="contact.html" class="btn hero-btn">hire me</a>
           <!-- social icons -->
           <ul class="social-icons hero-icons">
@@ -143,7 +144,7 @@
         <!-- about img -->
         <article class="about-img">
           <img
-            src="{{url_for('static',filename='images/about-img.jpeg')}}"
+            src="{{url_for('static',filename='images/test.jpg')}}"
             class="hero-photo"
             alt="about img"
           />
@@ -166,13 +167,13 @@
           </p>
           <p>
             He also continue his academic carrier at Istanbul Technical University
-            as PhD canditate on Mehatronics Enginnering. He developed rotational
+            as PhD canditate on Mechatronics Enginnering. He developed rotational
             6 degrees of freedom parallel manipulator with unique kinematic and
-            dynamic capabilities on light workloads. Currently his main studies regarding
+            dynamic capabilities on light workloads. Currently he is focusing
             state of the art detection and visual classification tasks using deep learning
             techniques.
           </p>
-          <a href="about.html" class="btn">about me</a>
+          <a href="{{url_for('about')}}" class="btn">about me</a>
         </article>
       </div>
     </section>
@@ -181,47 +182,51 @@
     <section class="section bg-grey">
       <!-- section title -->
       <div class="section-title">
-        <h2>Current Projects</h2>
+        <h2>Project Fields</h2>
         <div class="underline"></div>
       </div>
       <!--end of section title -->
       <div class="services-center section-center">
         <!-- single service -->
         <article class="service">
-          <i class="fas fa-code service-icon"></i>
-          <h4>web development</h4>
+          <i class="fas fa-robot service-icon"></i>
+          <h4>Robotics</h4>
           <div class="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
+            Working on autonomus vehichles with socially aware navigation
+            allowing them to observe human code of pedestrian conduct. Developing
+            robotic prototypes to analyse artificial enhanced kinematics and dynamics
+            capabilities of the different type of manipulators.
           </p>
         </article>
         <!-- end of single service -->
         <!-- single service -->
         <article class="service">
-          <i class="fab fa-sketch service-icon"></i>
-          <h4>web design</h4>
+          <i class="fas fa-camera service-icon"></i>
+          <h4>Computer Vision</h4>
           <div class="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
+            Developing image processing and object detection algorithms using OpenCV
+            YoloV4, SSD, Faster R-CNN to detect and locate defects during production
+            with the dynamic environment
+
           </p>
         </article>
         <!-- end of single service -->
         <!-- single service -->
         <article class="service">
-          <i class="fab fa-android service-icon"></i>
-          <h4>app design</h4>
+          <i class="fas fa-brain service-icon"></i>
+          <h4>Machine Learning</h4>
           <div class="underline"></div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            corrupti animi saepe quasi excepturi cupiditate voluptate dolor sed
-            obcaecati vero.
+            Developing project ideas for integrating machine learning techniques
+            with the industrial processes. Leading deep learning projects for industrial
+            products quality control and participating, introducing related European Commission
+             R&D projects.
           </p>
         </article>
         <!-- end of single service -->
+
       </div>
     </section>
     <!-- end of services -->
@@ -296,6 +301,9 @@
             </div>
           </article>
         </a>
+
+
+
         <!-- end of single project -->
       </div>
     </section>
@@ -321,13 +329,11 @@
         </div>
         <!--end of section title -->
         <p class="video-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ratione
-          perferendis exercitationem sit. Beatae eius commodi officiis rem
-          soluta ratione dignissimos quisquam tempore laudantium, porro vitae
-          cupiditate dicta magni quas corrupti aperiam, rerum minus odio totam
-          repellendus delectus nostrum veniam!
+          Check project page for some example and contact with me for both
+          personal projects and business collobrations
+
         </p>
-        <a href="contact.html" class="btn">contact me</a>
+        <a href="{{url_for('contact')}}"class="btn">contact me</a>
       </div>
     </section>
     <!-- end of connect -->
@@ -341,7 +347,73 @@
       <!--end of section title -->
       <div class="section-center skills-center">
         <article>
-          <h3>front end</h3>
+          <h3>Programming</h3>
+          <!-- single skill -->
+          <div class="skill">
+            <p>Python</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Pytorch/Keras</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Pandas/Numpy</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>OpenCV</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Matlab/Simulink</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Flask,Django</p>
+            <div class="skill-container">
+              <div class="skill-value value-70"></div>
+              <p class="skill-text skill-text-70">
+                70%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
           <!-- single skill -->
           <div class="skill">
             <p>HTML/CSS</p>
@@ -366,7 +438,7 @@
           <!--end of  single skill -->
           <!-- single skill -->
           <div class="skill">
-            <p>Sass</p>
+            <p>MongoDB</p>
             <div class="skill-container">
               <div class="skill-value value-50"></div>
               <p class="skill-text skill-text-50">
@@ -377,21 +449,21 @@
           <!--end of  single skill -->
         </article>
         <article>
-          <h3>back end</h3>
+          <h3>CAD-CAE / Automation / Cloud</h3>
           <!-- single skill -->
           <div class="skill">
-            <p>Python</p>
+            <p>Catia</p>
             <div class="skill-container">
               <div class="skill-value value-80"></div>
               <p class="skill-text skill-text-80">
-                80%
+                90%
               </p>
             </div>
           </div>
           <!--end of  single skill -->
           <!-- single skill -->
           <div class="skill">
-            <p>Flask</p>
+            <p>SolidWorks</p>
             <div class="skill-container">
               <div class="skill-value value-70"></div>
               <p class="skill-text skill-text-70">
@@ -402,11 +474,77 @@
           <!--end of  single skill -->
           <!-- single skill -->
           <div class="skill">
-            <p>MongoDB</p>
+            <p>Autoform Incremental</p>
             <div class="skill-container">
-              <div class="skill-value value-50"></div>
-              <p class="skill-text skill-text-50">
-                50%
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>ANSYS</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Arduino/Raspberry Pi</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>ROS</p>
+            <div class="skill-container">
+              <div class="skill-value value-80"></div>
+              <p class="skill-text skill-text-80">
+                90%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>PLC</p>
+            <div class="skill-container">
+              <div class="skill-value value-40"></div>
+              <p class="skill-text skill-text-40">
+                40%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>20-sim/Bond Graph</p>
+            <div class="skill-container">
+              <div class="skill-value value-70"></div>
+              <p class="skill-text skill-text-70">
+                70%
+              </p>
+            </div>
+          </div>
+          <!--end of  single skill -->
+          <!-- single skill -->
+          <div class="skill">
+            <p>Google AI Platform/Heroku</p>
+            <div class="skill-container">
+              <div class="skill-value value-70"></div>
+              <p class="skill-text skill-text-70">
+                70%
               </p>
             </div>
           </div>
@@ -427,36 +565,48 @@
         <!-- single timeline item -->
         <article class="timeline-item">
           <h4>2020</h4>
+          <h4>Digital Transformation Team Leader\Farplas</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+            <li>Developing neural network based deep learning techniques for visual quality control projects using Keras, Pytorch and OpenCV</li>
+            <li>Technical management of 3 different European Comission R&D projects(H2020) regarding AI development in production shop floor</li>
+            <li>Technical coordination of the Horizon 2020 projects as a part of the coordinator team</li>
+            <li>Participating and leading artificial intelligence enhanced manufacturing projects</li>
+            <li>Participating project idea development sessions with institute of sciences in Europe</li>
+            <li>Brainstorming and case study workshops to construct new R&D projects</li>
           </p>
           <span class="number">
             1
           </span>
         </article>
         <!-- end of  single timeline item -->
+
         <!-- single timeline item -->
         <article class="timeline-item">
-          <h4>2019</h4>
+          <h4>2018</h4>
+          <h4>Senior R&D Engineer\Farplas</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+           <li>Establishing digital transformation infrastructure of production shop floor introducing new techniques such as
+             deep learning based visual inspection, ai based decision mechanisms, 5G technology for sensor and machine communication,
+             collobrative robots and autonomus machines</li>
+            <li>Machine learning software development and visualization using Python, Pandas, Numpy and other related tools</li>
+            <li>Developing computer vision detection algorithms using OpenCV</li>
+            <li>Introducing innovation projects to enhance digital capabitiles of production system in shoop floor</li>
           </p>
           <span class="number">
             2
           </span>
         </article>
         <!-- end of  single timeline item -->
+
         <!-- single timeline item -->
         <article class="timeline-item">
-          <h4>2018</h4>
+          <h4>2016</h4>
+          <h4>Senior Automation Engineer\Farplas</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+            <li>Determining automatical, semi-automatical or manuel equipments for assembly lines of plastic injection products</li>
+            <li>Building up automation lines for secondary operations</li>
+            <li>Calculation of required parameters for secondary operations such as cutting, pucnhing and welding</li>
+            <li>Preperation of technical specifications of automation machines</li>
           </p>
           <span class="number">
             3
@@ -465,11 +615,15 @@
         <!-- end of  single timeline item -->
         <!-- single timeline item -->
         <article class="timeline-item">
-          <h4>2017</h4>
+          <h4>2015</h4>
+          <h4>R&D Engineer\TAI TUSAS</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+            <li>Endurance and Robustness analysis for THY Airbus A330, Airbus A320 and
+              Boeing 737 plane galleys movable mechanisms. Calculation required system dynamic parameters to define and purchase necessary actuators</li>
+            <li>Simulation analysis to test endurance robustness and kinematics for galley movable parts using Simulink</li>
+            <li>Leading functional test for plumbing, ventilation and cooling systems of the galleys</li>
+            <li>Setting up real time test automation systems and preparing required software</li>
+            <li>Preparing qualification test plan and test reports</li>
           </p>
           <span class="number">
             4
@@ -478,11 +632,15 @@
         <!-- end of  single timeline item -->
         <!-- single timeline item -->
         <article class="timeline-item">
-          <h4>2016</h4>
+          <h4>2013</h4>
+            <h4>Analysis Engineer\CPS Pressform</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+            <li>Sheet metal forming fem calculation using Autoform Incremental</li>
+            <li>Reverse engineering activities and determining process steps</li>
+            <li>Cost analysis for sheet metal products main operations such as progressive, tandem, transfer and secondary operations such as welding, coating, testing etc</li>
+            <li>Determining required force and process parameters for each process</li>
+            <li>Co-designer activities and generative surfaces design for automative sheet metal parts</li>
+            <li>8D problem solving activities</li>
           </p>
           <span class="number">
             5
@@ -491,17 +649,19 @@
         <!-- end of  single timeline item -->
         <!-- single timeline item -->
         <article class="timeline-item">
-          <h4>2015</h4>
+          <h4>2012</h4>
+            <h4>Project Engineer\CPS Pressform</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-            consequuntur voluptates tempore numquam? Quidem incidunt fugit quasi
-            autem, ea excepturi.
+            <li>Leading APQP process for Ford V362 Transit, Wabco, Knorr Bremse projects</li>
+            <li>Cost analysis and preparing quotation for related products</li>
+            <li>Leading quality control activities such as creating control plan and making statistical process control analysis</li>
           </p>
           <span class="number">
             6
           </span>
         </article>
         <!-- end of  single timeline item -->
+
       </div>
     </section>
     <!--end of  timeline -->
@@ -616,38 +776,39 @@
     <!-- footer -->
     <footer class="footer">
       <!-- social icons -->
-      <ul class="social-icons">
+      <ul class="social-icons hero-icons">
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-facebook"></i>
+          <a href="https://www.instagram.com/enesuguroglu/" class="social-icon">
+            <i class="fab fa-instagram"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
+          <a href="https://www.linkedin.com/in/enes-u%C4%9Furo%C4%9Flu-79827215a/" class="social-icon">
             <i class="fab fa-linkedin"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-squarespace"></i>
+          <a href="https://github.com/euguroglu" class="social-icon">
+            <i class="fab fa-github"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-behance"></i>
+          <a href="https://www.kaggle.com/enesugurolu" class="social-icon">
+            <i class="fab fa-kaggle"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com" class="social-icon">
-            <i class="fab fa-instagram"></i>
+
+          <a href="https://www.facebook.com/enes.uguroglu" class="social-icon">
+            <i class="fab fa-facebook"></i>
           </a>
         </li>
       </ul>
 
-      <p>&copy; <span id="date"></span> john doe. all rights reserved</p>
+      <p>&copy; <span id="date"></span> Enes Uğuroğlu all rights reserved</p>
     </footer>
     <script src="{{url_for('static',filename='js/app.js')}}"></script>
     <h1>Video Streaming Example</h1>
-    <img id="bg" src="{{url_for('video_feed')}}" alt="">
+    <!-- <img id="bg" src="{{url_for('video_feed')}}" alt=""> -->
   </body>
 </html>
