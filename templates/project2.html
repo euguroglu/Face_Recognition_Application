@@ -90,34 +90,38 @@
     <!-- ############## -->
     <!-- ############## -->
     <!-- ############## -->
-
     <section class="section single-page">
-      <div class="container">
-        <br>
-        <h3 class="content">
 
-          <span style="color:#198b90">Face Recognition</span> Application
+      <!-- section title -->
+      <div class="section-title">
+        <h1>Gender Classification</h1>
+        <div class="underline"></div>
+      </div>
+      <!--end of section title -->
+      <div class="section-center page-info">
 
-        </h3>
-        <br>
-        <p class="content">
 
+        <div class="container">
+
+
+        <p>
           Gender Classification: This app is driven by data and machine learning model.
-          As soon as user upload the image, in background it convert into grayscale, crop face, convert into eigen image and
-          finally it model to predict. All this functionality dumped in the flask app.
+          As soon as user upload the image, in the background image is being converted to grayscale,
+          algorithm detect crop bounding boxes and convert into eigen image and
+          finally feed the data into model to get prediction. All this functionality dumped in the flask application.
         </p>
         <br>
-        <pre>
-          <img src="{{url_for('static',filename='images/002.PNG')}}" alt="AI" width="600",height="230">                             <a href="{{url_for('gender')}}" class="btn btn-outline-primary">Try it Now!</a>
-          <br>
-
-        </pre>
-
-
+      </div>
       </div>
 
+      <div class="" align="center">
 
+
+    <a href="{{url_for('gender')}}" class="btn btn-secondary">Try it Now!</a>
+          </div>
     </section>
+
+
     <!-- ############## -->
     <!-- ############## -->
     <!-- ############## -->
