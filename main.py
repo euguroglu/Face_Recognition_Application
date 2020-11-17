@@ -21,6 +21,14 @@ def about():
 def projects():
     return render_template("projects.html")
 
+@app.route('/project1')
+def project1():
+    return render_template("project1.html")
+
+@app.route('/project2')
+def project2():
+    return render_template("project2.html")
+
 def gen(camera):
     while True:
         frame = camera.get_frame()

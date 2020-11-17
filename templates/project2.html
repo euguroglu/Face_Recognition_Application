@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enes Uğuroğlu || Projects</title>
+    <title>Enes Uğuroğlu || About</title>
     <link
       rel="stylesheet"
       href="{{url_for('static',filename='fontawesome-free-5.12.1-web/css/all.min.css')}}"
@@ -90,113 +90,33 @@
     <!-- ############## -->
     <!-- ############## -->
     <!-- ############## -->
-    <header class="projects-hero">
-      <!-- section title -->
-      <div class="section-title">
-        <h1>my projects</h1>
-        <div class="underline"></div>
+
+    <section class="section single-page">
+      <div class="container">
+        <br>
+        <h3 class="content">
+
+          <span style="color:#198b90">Face Recognition</span> Application
+
+        </h3>
+        <br>
+        <p class="content">
+
+          Gender Classification: This app is driven by data and machine learning model.
+          As soon as user upload the image, in background it convert into grayscale, crop face, convert into eigen image and
+          finally it model to predict. All this functionality dumped in the flask app.
+        </p>
+        <br>
+        <pre>
+          <img src="{{url_for('static',filename='images/002.PNG')}}" alt="AI" width="600",height="230">                             <a href="{{url_for('gender')}}" class="btn btn-outline-primary">Try it Now!</a>
+          <br>
+
+        </pre>
+
+
       </div>
-      <!--end of section title -->
-    </header>
-    <section class="section">
-      <div class="section-center projects-page-center">
-        <!-- single project -->
-        <article class="single-project">
-          <div class="project-container">
-            <img src="./images/project-1.jpeg" alt="single project" />
-            <a href={{url_for('project2')}} class="project-icon">
-              <i class="fas fa-home"></i>
-            </a>
-          </div>
-          <div class="project-details">
-            <h4>project name</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              eveniet amet odit aperiam, provident cum possimus sapiente minus
-              quos! Ipsum?
-            </p>
-            <div class="project-footer">
-              <span>
-                <i class="fab fa-github"></i>
-              </span>
-              <a href="https://www.github.com">source code</a>
-            </div>
-          </div>
-        </article>
-        <!-- end of single project -->
-        <!-- single project -->
-        <article class="single-project">
-          <div class="project-container">
-            <img src="./images/project-1.jpeg" alt="single project" />
-            <a href="https://www.johnsmilga.com" class="project-icon">
-              <i class="fas fa-home"></i>
-            </a>
-          </div>
-          <div class="project-details">
-            <h4>project name</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              eveniet amet odit aperiam, provident cum possimus sapiente minus
-              quos! Ipsum?
-            </p>
-            <div class="project-footer">
-              <span>
-                <i class="fab fa-github"></i>
-              </span>
-              <a href="https://www.github.com">source code</a>
-            </div>
-          </div>
-        </article>
-        <!-- end of single project -->
-        <!-- single project -->
-        <article class="single-project">
-          <div class="project-container">
-            <img src="./images/project-1.jpeg" alt="single project" />
-            <a href="https://www.johnsmilga.com" class="project-icon">
-              <i class="fas fa-home"></i>
-            </a>
-          </div>
-          <div class="project-details">
-            <h4>project name</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              eveniet amet odit aperiam, provident cum possimus sapiente minus
-              quos! Ipsum?
-            </p>
-            <div class="project-footer">
-              <span>
-                <i class="fab fa-github"></i>
-              </span>
-              <a href="https://www.github.com">source code</a>
-            </div>
-          </div>
-        </article>
-        <!-- end of single project -->
-        <!-- single project -->
-        <article class="single-project">
-          <div class="project-container">
-            <img src="./images/project-1.jpeg" alt="single project" />
-            <a href="{{url_for('project1')}}"class="project-icon">
-              <i class="fas fa-home"></i>
-            </a>
-          </div>
-          <div class="project-details">
-            <h4>project name</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-              eveniet amet odit aperiam, provident cum possimus sapiente minus
-              quos! Ipsum?
-            </p>
-            <div class="project-footer">
-              <span>
-                <i class="fab fa-github"></i>
-              </span>
-              <a href="https://www.github.com">source code</a>
-            </div>
-          </div>
-        </article>
-        <!-- end of single project -->
-      </div>
+
+
     </section>
     <!-- ############## -->
     <!-- ############## -->
@@ -208,7 +128,7 @@
       <ul class="social-icons">
         <!-- single item -->
         <li>
-          <a href="https://www.instagram.com/enesuguroglu/" class="social-icon">
+          <a href="https://www.instagram.com/enesuguroglu/"  class="social-icon">
             <i class="fab fa-instagram"></i>
           </a>
         </li>
@@ -222,7 +142,7 @@
         <!-- end of single item -->
         <!-- single item -->
         <li>
-          <a href="https://github.com/euguroglu" class="social-icon">
+          <a href="https://github.com/euguroglu"class="social-icon">
             <i class="fab fa-github"></i>
           </a>
         </li>
@@ -245,6 +165,6 @@
 
       <p>&copy; <span id="date"></span> Enes Uğuroğlu all rights reserved</p>
     </footer>
-    <script src="{{url_for('static',filename='js/app.js')}}">></script>
+    <script src="{{url_for('static',filename='js/app.js')}}"></script>
   </body>
 </html>
