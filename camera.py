@@ -25,3 +25,18 @@ class VideoCamera(object):
 
         ret,jpeg = cv2.imencode('.jpg',frame)
         return jpeg.tobytes()
+
+    def get_skecth(self):
+
+        ret,frame = self.video.read()
+        #Convert image to grayscale
+        img_gray = cv2.cvtColor(frame,cv2.COLOR_BGR2GRAY)
+
+        #Clean up image using Gaussian Blur
+        img_gray_blur = cv2.GaussianBlur(img_gray,(5,5),0)
+        #Extract edges from image
+        canny_edges = cv2.Canny(img_gray_blur,10,70)
+        #Do an invert binarizer the image
+        ret,mask = cv2.threshold(canny_edges,70,255,cv2.THRESH_BINARY_INV)
+        ret,jpeg = cv2.imencode('.jpg',mask)
+        return jpeg.tobytes()

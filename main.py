@@ -38,6 +38,8 @@ def project2():
 def project3():
     if "3_1" in request.form:
         return render_template("project3_1.html")
+    elif "3_2" in request.form:
+        return render_template("project3_2.html")
     else:
         return render_template("project3.html")
 
@@ -62,30 +64,31 @@ def gender():
         return render_template("gender.html",fileupload=True,img_name=filename,w=w)
     return render_template("gender.html",fileupload=False,img_name="freeai.png",w='300')
 
-
-# @app.route('/project3',methods=['GET','POST'])
-# def project3_1():
-#     if '3_1' in request.form:
-#         return render_template("project3_1.html")
-# # @app.route('/project3',methods=['GET','POST'])
-# # def project3():
-# #     if request.method == 'POST':
-# #         if '3_1' in request.form:
-# #             return render_template("project3_1.html")
-# #     # elif '3_2' in request.form:
-# #     #     return pass
-
-
 def gen(camera):
     while True:
         frame = camera.get_frame()
         yield (b'--frame\r\n'
+
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+def gen2(camera):
+    while True:
+        frame = camera.get_skecth()
+        yield (b'--frame\r\n'
+               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+
 
 @app.route('/video_feed')
 def video_feed():
     return Response(gen(VideoCamera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
+@app.route('/video_feed2')
+def video_feed2():
+    return Response(gen2(VideoCamera()),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+
+
 
 if __name__ == '__main__':
 
