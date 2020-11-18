@@ -4,7 +4,7 @@ from flask import redirect,url_for
 import os
 from PIL import Image
 from mains.utils import pipeline_model
-
+from wtforms import Form, BooleanField, StringField, PasswordField, validators
 
 UPLOAD_FOLDER ='static/upload'
 
@@ -34,6 +34,13 @@ def project1():
 def project2():
     return render_template("project2.html")
 
+@app.route('/project3',methods=['GET','POST'])
+def project3():
+    if "3_1" in request.form:
+        return render_template("project3_1.html")
+    else:
+        return render_template("project3.html")
+
 def getwidth(path):
     img = Image.open(path)
     size = img.size #width and height
@@ -54,6 +61,20 @@ def gender():
         img = pipeline_model(path,filename,color='bgr')
         return render_template("gender.html",fileupload=True,img_name=filename,w=w)
     return render_template("gender.html",fileupload=False,img_name="freeai.png",w='300')
+
+
+# @app.route('/project3',methods=['GET','POST'])
+# def project3_1():
+#     if '3_1' in request.form:
+#         return render_template("project3_1.html")
+# # @app.route('/project3',methods=['GET','POST'])
+# # def project3():
+# #     if request.method == 'POST':
+# #         if '3_1' in request.form:
+# #             return render_template("project3_1.html")
+# #     # elif '3_2' in request.form:
+# #     #     return pass
+
 
 def gen(camera):
     while True:
