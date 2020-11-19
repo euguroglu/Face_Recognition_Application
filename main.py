@@ -43,6 +43,10 @@ def project3():
     else:
         return render_template("project3.html")
 
+@app.route('/blog1')
+def blog1():
+    return render_template("blog1.html")
+
 def getwidth(path):
     img = Image.open(path)
     size = img.size #width and height

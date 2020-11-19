@@ -678,98 +678,30 @@
         <div class="card">
           <!-- front of the card -->
           <div class="card-side card-front">
-            <img src="./images/project-1.jpeg" alt="" />
+            <img src={{url_for('static',filename='images/svm.jpg')}} alt="" border="1" />
             <div class="card-info">
-              <h4>article title</h4>
+              <h4>How to use Support Vector Machine for Gender Classification?</h4>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
+                If you know how to deal with dimension classical machine learning
+                techniques can still generate good result on image data.
+
               </p>
               <div class="card-footer">
-                <img src="{{url_for('static',filename='images/hero-img-small.jpeg')}}" alt="author image" />
-                <p>7 min read</p>
+                <img src="{{url_for('static',filename='images/blog_im.JPG')}}" alt="author image" />
+                <p>3 min read</p>
               </div>
             </div>
           </div>
           <!-- card back  -->
           <div class="card-side card-back">
-            <button class="btn">read more</button>
+            <a href="{{url_for('blog1')}}" class="btn hero-btn">read more</a>
+            <!-- <button class="btn">read more</button> -->
           </div>
         </div>
         <!-- end of single article -->
-        <!-- single article -->
-        <div class="card">
-          <!-- front of the card -->
-          <div class="card-side card-front">
-            <img src="{{url_for('static',filename='images/project-2.jpeg')}}" alt="" />
-            <div class="card-info">
-              <h4>article title</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
-              </p>
-              <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
-                <p>7 min read</p>
-              </div>
-            </div>
-          </div>
-          <!-- card back  -->
-          <div class="card-side card-back">
-            <button class="btn">read more</button>
-          </div>
-        </div>
-        <!-- end of single article -->
-        <!-- single article -->
-        <div class="card">
-          <!-- front of the card -->
-          <div class="card-side card-front">
-            <img src="{{url_for('static',filename='images/project-3.jpeg')}}" alt="" />
-            <div class="card-info">
-              <h4>article title</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
-              </p>
-              <div class="card-footer">
-                <img src="{{url_for('static',filename='images/hero-img-small.jpeg')}}" alt="author image" />
-                <p>7 min read</p>
-              </div>
-            </div>
-          </div>
-          <!-- card back  -->
-          <div class="card-side card-back">
-            <button class="btn">read more</button>
-          </div>
-        </div>
-        <!-- end of single article -->
-        <!-- single article -->
-        <div class="card">
-          <!-- front of the card -->
-          <div class="card-side card-front">
-            <img src="./images/project-4.jpeg" alt="" />
-            <div class="card-info">
-              <h4>article title</h4>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et
-                nisi ut a est eum tempora dolorum temporibus voluptatibus!
-                Natus, provident.
-              </p>
-              <div class="card-footer">
-                <img src="./images/hero-img-small.jpeg" alt="author image" />
-                <p>7 min read</p>
-              </div>
-            </div>
-          </div>
-          <!-- card back  -->
-          <div class="card-side card-back">
-            <button class="btn">read more</button>
-          </div>
-        </div>
-        <!-- end of single article -->
+
+
+
       </div>
     </section>
     <!--end of  blog -->

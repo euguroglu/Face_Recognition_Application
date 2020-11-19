@@ -10,6 +10,7 @@
     />
     <!-- css -->
     <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" />
+
   </head>
 
   <body>
@@ -85,51 +86,139 @@
       </div>
     </aside>
     <!-- end of sidebar -->
-
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
-
     <section class="section single-page">
       <!-- section title -->
       <div class="section-title">
-        <h1>about me</h1>
+        <h1>How to use Support Vector Machine for Gender Classification?</h1>
         <div class="underline"></div>
       </div>
       <!--end of section title -->
       <div class="section-center page-info">
         <!-- about page -->
-        
-        <p>
-          Hello, I am Enes Uğuroğlu and I am a mechanical/mechatronics engineer
-          actively working at automotive industry as Digital Transformation Team
-          Leader.
-          My PhD studies ongoing on non-linear control systems and neural network.
-          I am developing personal and industrial projects regarding kinematics,
-          dynamics and control of the parallel robots as well as machine learning
-          and deep learning applications.
-            </p>
-        <p>
-          I spend most of my personal day, experimenting with Python
-          ,Machine Learning theory, designing and building robots, working on dynamics,
-         kinematics and control.I enjoy coding and the challenge of learning
-         something new everyday. Please check my blog to read about some recent studies
-         regarding these topics. Check and experince Project page to examine some
-         personal applications. Finally if you are chess addict like myself click
+          <div align="justify">
 
-          <a href="https://lichess.org/@/Dorilion"
-            >here</a>
-          to play with me.
+
+
+
+        <div>
+            <p style="float: left; padding-right: 15px;"><img src="{{url_for('static',filename='images/a1_im1.jpg')}}" class="hero-photo"   alt="" border="1px"></p>
+
+        </div>
+
+
+
+        <p>
+            Support vector machines are supervised learning methods used for classification,
+             regression, and outliers detection. All of these are common tasks in machine learning.
+             You can use them to detect defects on the products or cancerous cells based on millions
+             of images or you can use them to predict next driving routes with a reasonably fitted
+             regression model.
+
+Here in this example we will implement Support Vector Machine to create a model that is able to classify
+gender.
 
         </p>
+
+<p>
+  <br>
+
+We have total 14.000 images downlaoded from imdb wiki, click link below to download exact same data we use.
+
+<br>
+<a href="https://data.vision.ee.ethz.ch/cvl/rrothe/imdb-wiki/">Data Here</a>
+<h3 align="center">Section 1-Image Cropping</h3>
+<br>
+First we need to import necessary libraries. We will use numpy, opencv and matplotlib libraries.<br>
+<br>
+<div style="background-color: #F9F9F9;">
+<code>
+  import numpy as np <br>
+  import cv2 <br>
+  import matplotlib.pyplot as plt <br>
+  from glob import glob <br>
+</code>
+</div>
+<br>
+First step is creating 2 different variables to store male and female image file paths. When we use code below
+<br>
+<br>
+<div style="background-color: #F9F9F9;">
+<code>
+  femalepath = glob('./data/female/*.jpg') <br>
+  malepath = glob('./data/male/*.jpg')<br>
+  path = femalepath[0] <br>
+  img = cv2.imread(path) <br>
+</code>
+</div>
+<br>
+Below code shows upleft image which is randomy chosen among 7000 women faces.
+<br>
+<br>
+<div style="background-color: #F9F9F9;">
+<code>
+  plt.imshow(img) <br>
+  plt.show() <br>
+</code>
+</div>
+<br>
+After that lets convert sample image to grayscale using opencv "cvtColor" function.
+<br>
+<br>
+<div style="background-color: #F9F9F9;">
+<code>
+  gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) <br>
+  gray.shape <br>
+  plt.imshow(gray,cmap='gray') <br>
+</code>
+</div>
+<br>
+
+
+
+<img src="{{url_for('static',filename='images/ar1_im3.jpg')}}" class="hero-photo"   alt="" border="1px">
+<br>
+Now we converted image to the grayscale and preprocessing will be faster when we use Haar Cascade OpenCV_Project_04_Car_and_pedesterian_classifiers
+to detect face from the image. Haar Cascade is a machine learning object detection algorithm used to identify objects in an image or video and based
+ on the concept of ​​ features proposed by Paul Viola and Michael Jones in their paper <span style="color:blue;font-weight:bold">"Rapid Object Detection using a Boosted Cascade of Simple Features" </span> in 2001.
+Search given article for detail explanation.
+<br>
+Link <a href="https://github.com/opencv/opencv/tree/master/data/haarcascades">here</a> will redirect you to github repository where you can find Haar Cascade Classifier Models.
+Now we are ready to load our models to detect some faces.
+<br>
+<br>
+<div style="background-color: #F9F9F9;">
+<code>
+haar = cv2.CascadeClassifier('./model/haarcascade_frontalface_default.xml') <br>
+faces = haar.detectMultiScale(gray,1.5,5) <br>
+for x,y,w,h in faces: <br>
+    cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),2) <br>
+plt.imshow(img) <br>
+crop_img = img[y:y+h,x:x+h]  #crop image from bounding box <br>
+
+def extract_images(path,gender,i): <br>
+&nbsp;    img = cv2.imread(path) <br>
+&nbsp;    gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) <br>
+&nbsp;    faces = haar.detectMultiScale(gray,1.5,5) <br>
+&nbsp;    for x,y,w,h in faces: <br>
+&nbsp;&nbsp;        roi = img[y:y+h,x:x+w] <br>
+&nbsp;        if gender == 'male': <br>
+&nbsp;  &nbsp;          cv2.imwrite('./data/crop/male_crop/{}_{}.png'.format(gender,i),roi) <br>
+&nbsp;        else: <br>
+&nbsp; &nbsp;           cv2.imwrite('./data/crop/female_crop/{}_{}.png'.format(gender,i),roi) <br>
+</code>
+</div>
+<br>
+
+Function above will detect faces and determining annotation as x,y,w and h values. We will use that coordinates
+to crop faces from the given image, we will apply this function to entire dataset.
+<br>
+<img src="{{url_for('static',filename='images/ar1_im4.jpg')}}" alt="">
+<br>
+TBC with section 2
+</p>
+        </div>
       </div>
     </section>
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
-    <!-- ############## -->
-
     <!-- footer -->
     <footer class="footer">
       <ul class="social-icons">
@@ -174,4 +263,4 @@
     </footer>
     <script src="{{url_for('static',filename='js/app.js')}}"></script>
   </body>
-</html>
+  </html>
