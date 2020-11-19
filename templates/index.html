@@ -158,9 +158,9 @@
           </div>
           <!--end of section title -->
           <p>
-            Mechanical and Mechatronic Engineer(M.Sc.) with 9+ years experince in
-            automotive and aeronautics industry on control systems, robotics,
-            computer vision and data science. He is currently working at Farplas
+            Mechanical and Mechatronic Engineer(M.Sc.) and Python developer with 9+
+             years experince in automotive and aeronautics industry on control systems,
+              robotics,computer vision and data science. He is currently working at Farplas
             Automotive Company as Digital Transformation Team Leader.
 
 
@@ -237,54 +237,54 @@
         <h2>latest works</h2>
         <div class="underline"></div>
         <p class="projects-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-          repudiandae cupiditate ea facilis incidunt, non sapiente! Debitis
-          magnam, earum assumenda obcaecati cum quaerat facere ratione molestiae
-          dignissimos aliquid blanditiis architecto voluptates delectus
-          voluptate animi nulla! Autem explicabo perspiciatis officia ea.
+          Below check latest projects and their source code if you want to implement
+          them on your own.Check also blog page to read articles regarding information
+          in detail.
+
         </p>
       </div>
       <!--end of section title -->
       <div class="section-center projects-center">
         <!-- single project -->
-        <a href="projects.html" class="project-1">
+        <a href="{{url_for('project2')}}" class="project-1">
           <article class="project">
             <img
-              src="./images/project-1.jpeg"
+              src="{{url_for('static',filename='images/img.webp')}}"
               alt="single project"
               class="project-img"
+              border="1"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Gender Classification</h4>
+              <p>SVM&PCA</p>
             </div>
           </article>
         </a>
         <!-- end of single project -->
         <!-- single project -->
-        <a href="projects.html" class="project-2">
+        <a href="{{url_for('project3')}}" class="project-2">
           <article class="project">
             <img
-              src="{{url_for('static',filename='images/project-2.jpeg')}}"
+              src="{{url_for('static',filename='images/women.jpg')}}"
               alt="single project"
               class="project-img"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Person Detection</h4>
+              <p>CNN&GaussianBlur</p>
             </div>
           </article>
         </a>
         <!-- end of single project --><!-- single project -->
-        <a href="projects.html" class="project-3">
+        <a href="#" class="project-3">
           <article class="project">
             <img
-              src="{{url_for('static',filename='images/project-3.jpeg')}}"
+              src="{{url_for('static',filename='images/project-1.jpeg')}}"
               class="project-img"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Coming soon!</h4>
+              <p></p>
             </div>
           </article>
         </a>
@@ -296,8 +296,8 @@
               class="project-img"
             />
             <div class="project-info">
-              <h4>project title</h4>
-              <p>client name</p>
+              <h4>Coming soon!</h4>
+              <p></p>
             </div>
           </article>
         </a>
@@ -318,7 +318,7 @@
         class="video-container"
         poster="{{url_for('static',filename='images/project-1.jpeg')}}"
       >
-        <source src="{{url_for('static',filename='videos/connect.mp4')}}" type="video/mp4" />
+        <source src="{{url_for('static',filename='videos/connect2.mp4')}}" type="video/mp4" />
         Sorry, your browser does not support embedded videos
       </video>
       <div class="video-banner">
