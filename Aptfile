@@ -3,6 +3,7 @@ libxrender1
 libfontconfig1
 libice6
 libgl1
+RUN apt-get update && apt-get install -y libgl1-mesa-dev
 RUN apt-get update ##[edited]
 RUN apt-get install 'ffmpeg'\
     'libsm6'\
