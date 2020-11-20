@@ -101,7 +101,7 @@
 
 
         <div>
-            <p style="float: left; padding-right: 15px;"><img src="{{url_for('static',filename='images/a1_im1.jpg')}}" class="hero-photo"   alt="" border="1px"></p>
+            <p style="float: left; padding-right: 15px;"><img src="{{url_for('static',filename='images/a1_im1.JPG')}}" class="hero-photo"   alt="" border="1px"></p>
 
         </div>
 
@@ -175,7 +175,7 @@ After that lets convert sample image to grayscale using opencv "cvtColor" functi
 
 
 
-<img src="{{url_for('static',filename='images/ar1_im3.jpg')}}" class="hero-photo"   alt="" border="1px">
+<img src="{{url_for('static',filename='images/ar1_im3.JPG')}}" class="hero-photo"   alt="" border="1px">
 <br>
 Now we converted image to the grayscale and preprocessing will be faster when we use Haar Cascade OpenCV_Project_04_Car_and_pedesterian_classifiers
 to detect face from the image. Haar Cascade is a machine learning object detection algorithm used to identify objects in an image or video and based
@@ -212,7 +212,7 @@ def extract_images(path,gender,i): <br>
 Function above will detect faces and determining annotation as x,y,w and h values. We will use that coordinates
 to crop faces from the given image, we will apply this function to entire dataset.
 <br>
-<img src="{{url_for('static',filename='images/ar1_im4.jpg')}}" alt="">
+<img src="{{url_for('static',filename='images/ar1_im4.JPG')}}" alt="">
 <br>
 TBC with section 2
 </p>
