@@ -1,10 +1,13 @@
-from flask import Flask, render_template,Response,request
+from flask import Flask, render_template,Response,request,jsonify
 from camera import VideoCamera
 from flask import redirect,url_for
 import os
 from PIL import Image
 from mains.utils import pipeline_model
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
+from predictors import RegressionPredictor, CNNPredictor
+import numpy as np
+
 
 UPLOAD_FOLDER ='static/upload'
 
@@ -90,6 +93,24 @@ def video_feed2():
     return Response(gen2(VideoCamera()),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
+@app.route('/project4', methods=['GET'])
+def project4():
+    # owing to the Singleton Pattern can make model loading ahead,
+    # so let predictors load model before loading page completed.
+    RegressionPredictor(), CNNPredictor()
+
+    return render_template('project4.html')
+
+
+@app.route('/predict', methods=['POST'])
+def predict():
+    # reverse (white background, black digit -> black background, white digit)
+    # and normalize the image
+    input_data = ((255 - np.array(request.json)) / 255.0)
+
+    result_of_regression = RegressionPredictor.predict(input_data)
+    result_of_convolutional = CNNPredictor.predict(input_data)
+    return jsonify(data=[result_of_regression, result_of_convolutional])
 
 
 
