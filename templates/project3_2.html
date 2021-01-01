@@ -21,7 +21,38 @@
     <!-- css -->
     <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}" />
   </head>
+  <style>
+   #container2 {
+       width: 660px;
 
+       margin: 0px auto;
+       border: 10px #333 solid;
+   }
+   #videoElement2 {
+       width: 640px;
+       height: 480px;
+       display: none;
+       background-color: #666;
+   }
+
+   #imageElement {
+       width: 640px;
+       height: 480px;
+       background-color: #666;
+   }
+
+   #canvasElement2 {
+       width: 640px;
+       height: 480px;
+       border: 1px solid black;
+   }
+   #photo2 {
+       width: 640px;
+       height: 480px;
+
+       border: 1px solid black;
+   }
+  </style>
   <body>
     <!-- navbar -->
     <nav class="nav" id="nav">
@@ -110,10 +141,19 @@
       <!--end of section title -->
       <div class="section-center page-info">
         <!-- about page -->
-        <p>
+        <div align="center" id="container2" >
+            <div>
+                <video autoplay="true" id="videoElement2"></video>
 
-          <img id="bg" src="{{url_for('video_feed2')}}" alt="">
-        </p>
+
+
+                <canvas id="canvasElement2"></canvas>
+
+
+                <img id="photo2">
+
+            </div>
+        </div>
       </div>
     </section>
     <!-- ############## -->
@@ -164,5 +204,9 @@
       <p>&copy; <span id="date"></span> Enes Uğuroğlu all rights reserved</p>
     </footer>
     <script src="{{url_for('static',filename='js/app.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='js/main3.js') }}"></script>
   </body>
 </html>
